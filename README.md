@@ -1,5 +1,32 @@
 # DungeonTopGame
 
+## Table of Contents
+- [How to Play in console](#how-to-play-in-console)
+- [Project Structure](#project-structure)
+- [How to Open and Run the Project](#how-to-open-and-run-the-project)
+    - [Prerequisites](#prerequisites)
+    - [Opening in IntelliJ IDEA (Recommended)](#opening-in-intellij-idea-recommended)
+    - [Running from the Command Line](#running-from-the-command-line)
+- [Collaboration using Git & GitHub](#collaboration-using-git--github)
+    - [Step 1: Get the Project from GitHub (Clone)](#step-1-get-the-project-from-github-clone)
+    - [Step 2: Stay Up-to-Date (Pull)](#step-2-stay-up-to-date-pull)
+    - [Step 3: Make Your Own Changes (The Workflow)](#step-3-make-your-own-changes-the-workflow)
+    - [Step 4: Merge Your Changes (Create a Pull Request)](#step-4-merge-your-changes-create-a-pull-request)
+- [Project Progress Checklist](#project-progress-checklist)
+    - [Implemented Features](#implemented-features)
+    - [To-Do List](#to-do-list)
+
+## How to Play in console
+
+- Use the commands `s <x> <y>` to select one of your minions (e.g., `s 3 6`).
+- Once a minion is selected, use `w`, `a`, `s`, `d` to move it.
+- Use `aw`, `aa`, `as`, `ad` to attack with the selected minion in a direction.
+- Use `p <index>` to play a card from your hand.
+- Type `end` to finish your turn.
+- Type `help` to see the command list in-game.
+
+---
+
 ## Project Structure
 
 The project is organized into the following packages:
@@ -11,9 +38,64 @@ The project is organized into the following packages:
 
 The main entry point of the game is the `Main.java` file, which contains the core game engine and UI rendering.
 
-## How to Run the Project
+## How to Open and Run the Project
 
-This project is a standard Java project. To run it, open it in an IDE that supports Java (like IntelliJ IDEA or VS Code) and run the `Main.java` file.
+This project is a standard Java project without any external dependencies. You can open it in any Java IDE or run it from the command line.
+
+### Prerequisites
+
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) version 11 or higher.
+
+### Opening in IntelliJ IDEA (Recommended)
+
+IntelliJ IDEA is a popular Integrated Development Environment (IDE) for Java development.
+
+1.  **Open IntelliJ IDEA.**
+2.  Click on **File** -> **Open...**.
+3.  Navigate to the directory where you cloned or downloaded this project and select the `DungeonTopGame` folder.
+4.  IntelliJ IDEA will automatically detect the project structure.
+5.  Locate the `Main.java` file in the `src` directory.
+6.  Right-click on the `Main.java` file and select **Run 'Main.main()'**.
+
+The game will start running in the console at the bottom of the IDE.
+
+### Running from the Command Line
+
+You can also run the game from the command line on any operating system that has the JDK installed.
+
+#### On Windows
+
+1.  Open the **Command Prompt** or **PowerShell**.
+2.  Navigate to the project's root directory:
+    ```bash
+    cd path\to\DungeonTopGame
+    ```
+3.  Compile all Java files from the `src` directory into the `out` directory:
+    ```bash
+    javac -d out src\*.java src\board\*.java src\cards\*.java src\entities\*.java
+    ```
+4.  Run the game:
+    ```bash
+    java -cp out Main
+    ```
+
+#### On macOS and Linux
+
+1.  Open the **Terminal**.
+2.  Navigate to the project's root directory:
+    ```bash
+    cd path/to/DungeonTopGame
+    ```
+3.  Compile all Java files from the `src` directory into the `out` directory:
+    ```bash
+    javac -d out src/*.java src/board/*.java src/cards/*.java src/entities/*.java
+    ```
+4.  Run the game:
+    ```bash
+    java -cp out Main
+    ```
+
+---
 
 ## Collaboration using Git & GitHub
 
@@ -28,7 +110,7 @@ This is the first thing you do to get the project on your computer. You only nee
 3.  Run the following command to copy the project from GitHub to your computer:
 
     ```bash
-    git clone https://github.com/shibli-mueed/DungeonTopGame.git
+    git clone [https://github.com/shibli-mueed/DungeonTopGame.git](https://github.com/shibli-mueed/DungeonTopGame.git)
     ```
 
 This will create a `DungeonTopGame` folder. You can now open this folder in your IDE.
